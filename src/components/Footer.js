@@ -8,7 +8,7 @@ function Footer() {
                 <img src={imgS} alt="logo"/>
             </div>
             <div className='contTwo'>
-                <p>2022 - Version Beta 1.0.0</p>
+                <p>2022 - Version Beta 1.0</p>
             </div>
             <div className='contThree'>
                 <Icons/>
