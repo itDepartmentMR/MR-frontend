@@ -1,0 +1,16 @@
+.img{
+    width: 30%;
+    height: 50%;
+    border-radius: 10px;
+    background-color: rgb(136, 160, 181);
+    margin: 20px 0px;
+    .contImg{
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s;
+        border-radius: 10px;
+    }
+    .contImg:hover{
+        opacity: 10%;
+    }
+}

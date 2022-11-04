@@ -1,0 +1,408 @@
+.Freelancer{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    .contEmprende{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        .contModal{
+            width: 300px;
+            height: 100px;
+            position: fixed;
+            background-color: #9b9b9b59;
+            backdrop-filter: blur(15px);
+            left: 78%;
+            top: 87%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            color: rgba(94, 145, 19, 0.486);
+            animation: animModal 0.4s ease-in-out;
+            .contBtn{
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                position: absolute;
+                top: 10%;
+                left: 5%;
+                border-radius: 50%;
+                background-color: rgba(255, 0, 0, 0.507);
+            }
+        }
+        .contBody{
+            width: 50%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+            .contHelpers{
+                width: 100%;
+                height: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 20%;
+                    height: 50%;
+                }
+            }
+        }
+        .contForm{
+            width: 30%;
+            height: 80%;
+            form{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                border-radius: 10px;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                h4{
+                    margin-bottom: 30px;
+                    text-align: center;
+                }
+                input{
+                    width: 70%;
+                    height: 5%;
+                    text-align: center;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    background-color: rgba(164, 164, 164, 0.3);
+                }
+                #fails{
+                    color: rgba(255, 0, 0, 0.5);
+                    font-size: 12px;
+                }
+                #tele{
+                    width: 50%;
+                    border: 1px solid transparent;
+                    background-color: rgba(164, 164, 164, 0.3);
+                }
+                button{
+                    width: 30%;
+                    height: 5%;
+                    border: 1px solid transparent;
+                    border-radius: 10px;
+                    margin-top: 20px;
+                    background-color: #FFDE02;
+                    transition: all 0.2s;
+                    cursor: pointer;
+                }
+                #loading{
+                    background-color: #9b9b9b;
+                    animation: animBtn 0.2s infinite;
+                }
+                button:hover{
+                    width: 33%;
+                    background-color: transparent;
+                    border: 1px solid #FFDE02;
+                }
+            }
+        }
+    }
+    @media (max-width: 600px){
+        .contEmprende{
+            flex-direction: column;
+            height: 120%;
+            .contBody{
+                width: 100%;
+                height: 50%;
+                .contHelpers{
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }       
+            .contForm{
+                width: 100%;
+                height: 60%;
+                h4{
+                    font-size: 14px;
+                }
+                label{
+                    font-size: 12px;
+                }
+            }     
+        }
+    }
+    .contWebinnars{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .contHeader{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .contBody{
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .contCardPreste{
+                width: 20%;
+                height: 70%;
+                border-radius: 10px;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                margin: 40px;
+                cursor: pointer;
+                transition: all 0.2s;
+                &:hover{
+                    transform:translate(0px, -42px);
+                    border-bottom: 2px solid #FFDE02;
+                }
+                .contImg{
+                    width: 100%;
+                    height: 30%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .contBody{
+                    width: 100%;
+                    height: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-align: center;
+                    margin-top: 10px;
+                    .Biotecnología{
+                        background-color: rgba(2, 255, 36, 0.5);
+                        width: 35%;
+                        height: 8%;
+                        border-radius: 15px;
+                        font-size: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                    .Tecnología{
+                        background-color: rgba(255, 222, 2, 0.5);
+                        width: 30%;
+                        height: 8%;
+                        
+                        border-radius: 15px;
+                        font-size: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                    #fecha{
+                        color: #9b9b9b;
+                    }
+                    p{
+                        margin: 5px;
+                        font-size: 12px;
+                    }
+                    .contPerfil{
+                        width: 100%;
+                        height: 20%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        margin-top: 20px;
+                        img{
+                            width: 18%;
+                            height: 100%;
+                            margin-right: 5px;
+                            margin-left: 20px;
+                            border-radius: 50%;
+                        }
+                        .contP{
+                            width: 80%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            p{
+                                margin: 1px;
+                                font-size: 12px;
+                            }
+                            #fecha{
+                                color: #9b9b9b;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        @media (max-width: 600px){
+            .contBody{
+                flex-direction: column;
+                height: 95%;
+
+                .contCardPreste{
+                    width: 60%;
+                    margin: 10px;
+                    .contBody{
+                        .Biotecnología{
+                            width: 45%;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        
+    }       
+    @media (max-width: 600px){
+        .contWebinnars{
+            height: 150%;
+        }
+    }
+    .contHeader{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    @media (max-width: 600px){
+        .contHeader{
+            font-size: 12px;
+        }
+    }
+
+        .ApiBitcoins{
+            width: 100%;
+            height: 100%;
+            .contTableBit{
+                width: 100%;
+                height: 100%;
+                table{
+                    width: 100%;
+                    height: 100%;
+                    border-collapse: collapse;
+                    thead{
+                        width: 100%;
+                        height: 10%;
+                        background-color: #FFDE02;
+                        tr{
+                            margin: 0px;
+                            th{
+                                font-size: 12px;
+                                height: 40px;
+                            }
+                        }
+                    }
+                    tbody{
+                        width: 100%;
+                        height: 90%;
+                        tr{
+                            width: 100%;
+                            height: 10%;
+                            text-align: center;
+                            #p{
+                                font-size: 12px;
+                                color: rgb(168, 168, 168);
+                            }
+                            img{
+                                width: 40px;
+                                height: 50%;
+                            }
+                            td{
+                                text-align: center;
+                                font-size: 14px;
+
+                            }
+                            #name{
+                                color: #424242;
+                            }
+                            #price{
+                                color: #000000;
+                            }
+                            #true{
+                                color: rgba(0, 128, 0, 0.5);
+                            }
+                            #false{
+                                color: rgba(255, 0, 0, 0.5);
+                            }    
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width: 600px){
+            .ApiBitcoins{
+                .contTableBit{
+                    table{
+                        thead{
+
+                            tr{
+                                th{
+                                    font-size: 9px;
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                font-size: 5px;
+                                td{
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+}
+.Freelancer::-webkit-scrollbar {
+    display: none;
+}
+.contBitCoins::-webkit-scrollbar {
+    display: none;
+}
+@keyframes animBtn {
+    0%{
+        background-color: #FFDE02;
+    }
+    100%{
+        background-color: #9b9b9b;
+    }
+}
+
+@keyframes animModal {
+    0%{
+        transform: translateX(100px);
+    }
+}

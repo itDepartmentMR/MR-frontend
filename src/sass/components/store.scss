@@ -1,0 +1,190 @@
+.contStore{
+    width: 100%;
+    height: 20%;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    .contImgs{
+        width: 20%;
+        height: 80%;
+        border-radius: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media (max-width: 1070px){
+        .contImgs{
+            width: 50%;
+            margin-right: 10px;
+        }
+    }
+    @media (max-width: 600px){
+        .contImgs{
+            width: 10%;
+            margin-right: 10px;
+        }
+    }
+    @media (max-width: 500px){
+        .contImgs{
+            width: 20%;
+            margin-right: 10px;
+        }
+    }
+    .contDes{
+        width: 60%;
+        height: 90%;
+        background: #FFDE02;
+        background-blend-mode: multiply;
+        border: 1px solid #D7D7D7;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0px 45px 45px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 10px;
+        #pname{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            mix-blend-mode: normal;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+        }
+        #pdesc{
+            font-family: 'Roboto Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        b{
+            font-size: 12px;
+        }
+    }
+    @media (max-width: 1120px){
+        .contDes{
+            height: 105%;
+        }
+    }
+    @media (max-width: 1070px){
+        .contDes{
+            height: 120%;
+            width: 105%;
+        }
+    }
+    @media (max-width: 1050px){
+        .contDes{
+            height: 122%;
+        }
+    }
+}
+@media (max-width: 1005px){
+    .contStore{
+    .contDes{
+        height: 140%;
+        width: 105%;
+    }
+    }
+}
+@media (max-width: 1070px){
+    .contDes{
+        #pname{
+            font-size: 8;
+        }
+        #pdesc{
+            font-size: 7;
+        }
+    }
+}
+
+@media (max-width: 1070px){
+    .contStore{
+        margin-top: 40px;
+    }
+}
+@media (max-width: 1005px){
+    .contStore{
+        margin-top: 50px;
+    }
+}
+@media (max-width: 1005px){
+    .contDes{
+        #pname{
+            font-size: 6;
+        }
+        #pdesc{
+            font-size: 6;
+        }
+    }
+}
+.contStore2{
+    width: 100%;
+    height: 20%;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    .contImgs{
+        width: 20%;
+        height: 90%;
+        border-radius: 50%;
+        background: #D9D9D9;
+    }
+    .contDes{
+        width: 70%;
+        height: 97%;
+        background: #FFDE02;
+        background-blend-mode: multiply;
+        border: 1px solid #D7D7D7;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 45px 0px 0px 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        padding-right: 10px;
+        #pname{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            mix-blend-mode: normal;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+        }
+        #pdesc{
+            
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        b{
+            font-size: 12px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .contStore{
+        height: 25%;
+        .contDes{
+            height: 100%;
+            
+            #pname{
+                font-size: 9px;
+            }
+            #pdesc{
+                font-size: 9px;
+            }
+            b{
+                font-size: 9px;
+            }
+        }
+    }
+}

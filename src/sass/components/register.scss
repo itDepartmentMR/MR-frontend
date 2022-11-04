@@ -1,0 +1,193 @@
+
+.register{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(93deg, rgba(229,233,191,0.6643032212885154) 12%, rgba(255,222,0,1) 65%, rgba(237,227,0,0.8071603641456583) 94%);
+   
+    .contForm{
+        width: 40%;
+        height: 70%;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        .form{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            .header{
+                width: 100%;
+                height: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .contBody{
+                width: 100%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .contInput{
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    #fails{
+                        font-size: 12px;
+                        color: rgba(255, 0, 0, 0.5);
+                    }
+                    input{
+                        width: 50%;
+                        height: 12%;
+                        text-align: center;
+                        border: 1px solid rgb(230, 217, 115);
+                        border-radius: 5px;
+                        background-color: rgba(255, 255, 255, 0.9);
+                    }
+                    select{
+                        width: 50%;
+                        height: 10%;
+                        border: none;
+                        option{
+                            background-color: antiquewhite;
+                            border-radius: 0px;
+                        }
+                    }
+                    
+                }
+            }
+            .contFooter{
+                width: 100%;
+                height: 10%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                .btnNav{
+                    width: 20%;
+                    height: 50%;
+                    cursor: pointer;
+                    border: 1px solid rgb(230, 217, 115);
+                    border-radius: 5px;
+                    text-decoration: none;
+                    text-align: center;
+                    background-color: rgba(153, 5, 5, 0.5);
+                }
+                input{
+                    width: 20%;
+                    height: 50%;
+                    cursor: pointer;
+                    border: 1px solid rgb(230, 217, 115);
+                    border-radius: 5px;
+                    background-color: rgba(255, 255, 255, 0.9);
+                }
+                button{
+                    width: 20%;
+                    height: 50%;
+                    cursor: pointer;
+                    border: 1px solid rgb(230, 217, 115);
+                    border-radius: 5px;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    .btnRe{
+                        width: 100%;
+                        height: 100%;
+                        text-decoration: none;
+                        font-size: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: none;
+                        
+                        background-color: transparent;
+                    
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    .contModal{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: transparent;
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .contBody{
+            width: 30%;
+            height: 50%;
+            background-color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            color: rgb(100, 100, 100);
+            border: 1px solid rgba( 255, 222, 0);
+            .btnAceptar{
+                margin-top: 20px;
+                width: 30%;
+                height: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba( 255, 222, 0);
+                border-radius: 5px;
+                text-decoration: none;
+                transition: all 0.2s;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .register{
+        .contForm{
+            width: 90%;
+            font-size: 12px;
+            .contFooter{
+                .btnNav{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                input{
+                    font-size: 10px;
+                }
+                button{
+                    font-size: 9px;
+                }
+            }
+        }
+        .contModal{
+            .contBody{
+                width: 80%;
+                height: 80%;
+                .btnAceptar{
+                    height: 5%;
+                }
+            }
+        }
+
+    }
+}

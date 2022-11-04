@@ -1,0 +1,362 @@
+@import './card.scss';
+.home{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    animation: animHome ease-in-out 0.2s;
+    .contWelcome{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        
+        align-items: center;
+        justify-content: center;
+        .text{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            p{
+                font-size: 25px;
+                text-align: center;
+                color: rgb(87, 87, 87);
+            }
+        }
+        .img{
+            background-color: transparent;
+            width: 30%;
+            height: 90%;
+            background-image: url('../../img/img02.svg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+    .contInfo{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .cards{
+            width: 100%;
+            height: 90%;       
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            background-color: #f2f2f2;
+        }
+        .line{
+            width: 60%;
+            height: 25%;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+            background: linear-gradient(241deg, rgba(229,233,191,0.6643032212885154) 12%, rgba(255,222,0,1) 45%, rgba(237,227,0,0.8071603641456583) 94%);
+            
+            h2{
+                width: 50%;
+                height: 100%;
+                text-align: center;
+            }
+            p{
+                width: 80%;
+                height: 100%;
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 700px){
+            .line{
+                    height: 35%;
+            }
+        }
+    }
+    .visMis{
+        width: 100%;
+        height: 100%;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background: url('../../img/logoOficial.png');
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+            .cardM{
+                width: 30%;
+                height: 50%; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0px 10px;
+                gap: 20px;
+                box-shadow: 0px 10px 30px 1px rgb(255, 255, 255);
+                border-radius: 15px;
+                padding: 20px;
+                b{
+                    font-size: 50px;
+                    text-align: center;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+                p{
+                    font-size: 17px;
+                    text-align: center;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+            }
+    }
+    @media (max-width: 700px){
+        .visMis{
+                margin-top: 12%;
+        }
+    }
+
+    .contSomos{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        
+        .contHead{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            h1{
+                width: 80%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgb(223, 223, 102);
+            }
+            p{
+                width: 50%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 20px;
+                color: rgb(71, 71, 71);
+            }
+        }
+        .contBody{
+            width: 100%;
+            height: 20%;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .contCardSomos{
+                width: 15%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 50%;
+                    height: 70%;
+                }
+            }
+        }
+
+        @media (max-width: 700px){
+            .contBody{
+                    margin-top: 100px;
+                    .contCardSomos{
+                        width: 40%;
+                        text-align: center;
+                    }
+            }
+        }
+
+    }
+    .footer{
+        width: 100%;
+        height: 35%;
+        background-color: #262626;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .contOne{
+            width: 20%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .contTwo{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            p{
+                font-size: 12px;
+            }
+        }
+        .contThree{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .icon{
+                width: 10%;
+                height: 10%;
+                margin: 10px;
+            }
+        }
+    }
+}
+.home::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes animHome {
+    0%{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    100%{
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+}
+@media (max-width: 800px){
+    .home{
+        .visMis{
+            .cardM{
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+        .contSomos{
+            .contHead{
+                p{
+                    font-size: 12px;
+                }
+                
+            }
+        }
+    }
+}
+@media (max-width: 600px){
+    .home .contWelcome{
+        flex-direction: column;
+        .text{
+            h1{
+                margin-top: 20px;
+                font-size: 20px;
+            }
+            p{
+                font-size: 15px;
+            }
+        }
+        .img{
+            width: 50%;
+            height: 60%;
+        }
+    }
+    .home{
+        .contInfo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .cards{
+                flex-direction: column;
+                .media{
+                    margin-bottom: 40px;
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+            .line{
+                width: 80%;
+                height: 35%;
+                h2{
+                    font-size: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+        .visMis{
+            flex-direction: column;
+            margin-bottom: 20px;
+            .cardM{
+                width: 80%;
+                b{
+                    font-size: 12px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+        .contSomos{
+            height: 150%;
+            .contHead{
+                width: 100%;
+                height: 20%;
+                margin-top: 20px;
+                h1{
+                    font-size: 12px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+            .contBody{
+                height: 100%;
+                flex-direction: column;
+                margin-bottom: 20px;
+                .contCardSomos{
+                    width: 40%;
+                }
+                b{
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+        .footer{
+            height: 20%;
+            margin-top: 30px;
+        }
+    }
+}

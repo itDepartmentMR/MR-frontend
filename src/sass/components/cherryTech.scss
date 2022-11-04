@@ -1,0 +1,139 @@
+.cherryTech{
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url(../../img/LogoCherryTech.svg);
+    background-size: 20%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    .contServices{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        h2{
+            color: #7A144D;
+            margin-bottom: 10px;
+        }
+        .contBtn{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: all 0.2s;
+            background-color: rgba(122, 20, 78, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: animServices 0.3s ease-in;
+            img{
+                width: 70%;
+                height: 70%;
+            }
+            .contBody{
+                display: none;
+                color: transparent;
+                transition: all 0.2s;
+                
+            }
+            
+        }
+        .contBtn:hover{
+            width: 100%;
+            height: 50%;
+            border-radius: 0px;
+            background-color: transparent;
+            img{
+                display: none;
+            }
+            .contBody{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                color: transparent;
+                p{
+                    font-size: 15px;
+                }
+            }
+            .contBody:hover{
+            
+                color: #E71E56;
+            }
+        }
+        
+        
+    }
+}
+@keyframes animServices {
+    0%{
+        margin-bottom: 200px;
+        
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 600px){
+    .cherryTech{
+        display: flex;
+        flex-direction: column;
+        height: 130%;
+        background-image: none;
+        .contFick{
+            display: none;
+        }
+        .contServices{
+            h2{
+                border-bottom: 2px solid #79144C;
+            }
+            .contBtn{
+                width: 100%;
+                height: 50%;
+                border-radius: 0px;
+                background-color: transparent;
+                margin-top: 20px;
+                img{
+                    display: none;
+                }
+                .contBody{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    color: #E71E56;
+                    p{
+                        font-size: 12px;
+                        color: #79144C;
+                    }
+                }
+                
+                
+            }
+            .contBtn:hover{
+                .contBody{
+                    p{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+}
