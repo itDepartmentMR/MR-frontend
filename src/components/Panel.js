@@ -1,9 +1,10 @@
-const storeImg = require.context('../img', true);
-function Panel() {
+
+function Panel({url, desc}) {
     return ( 
         <>
-            <div className="contImg">
-                <img src={storeImg(`./b3.png`)} alt=""/>
+            <div className="contCard">
+                <img src={url} alt="imgNews"/>
+                <p>{desc}</p>
             </div>
         </>
      );

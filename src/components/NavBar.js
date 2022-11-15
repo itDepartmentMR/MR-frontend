@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { AiFillAppstore } from "react-icons/ai";
 import imgLogo from "../img/logoBlack.svg";
 import imgUser from "../img/userLogin.svg";
-function NavBar({changeHome, changeContact, changeProductos, changeCherry, changeFreelancer}) {
+function NavBar() {
     const cookies = new Cookies();    
     const [userID] = useState(cookies.get('id'));
     const [menu, setMenu] = useState(0);
@@ -24,27 +24,58 @@ function NavBar({changeHome, changeContact, changeProductos, changeCherry, chang
     }
     return ( 
         <div className="navBar">
+            {
+                    menu===1?
+                    <div className='btnRespons' onClick={()=> menuRespos()}>
+                                <NavLink className="btn"  to="/noticias">
+                                    <p>Noticias</p>
+                                </NavLink>
+                                <NavLink className="btn"  to="/conferencias">
+                                    <p>Conferencias</p>
+                                </NavLink>
+                                <NavLink className="btn"  to="/conocenos">
+                                    <p>Conocenos</p>
+                                </NavLink>
+                            
+                                {
+                                    userID===undefined?
+                                    <NavLink className="btn" to="/login">
+                                        Iniciar Sesion
+                                    </NavLink>
+                                    :
+                                    <button className="btn" onClick={cerrarSesion}>
+                                        Cerrar Sesion
+                                    </button>
+                                    
+                                }
+                    </div>:
+                    <></>
+                }
             <div className="title">
-                <div className="contTitle">
+                <NavLink className="contTitle" to="/">
                     <img src={imgLogo} alt="logo"/>
-                </div>
+                </NavLink>
             </div>
             <div className="btns">
                 <div className="contBtn">
-                    <button className="btn" onClick={changeFreelancer}>Freelancer</button>
+                    <NavLink className="btn"  to="/">
+                        <p>Inicio</p>
+                    </NavLink>
                 </div>
                 <div className="contBtn">
-                    <button className="btn" onClick={changeCherry}>Cherry Tech</button>
-                </div>
-                
-                <div className="contBtn">
-                    <button className="btn" onClick={changeHome}>Nosotros</button>
+                    <NavLink className="btn"  to="/noticias">
+                        <p>Noticias</p>
+                    </NavLink>
                 </div>
                 <div className="contBtn">
-                    <button className="btn" onClick={changeProductos}>Productos</button>
+                    <NavLink className="btn"  to="/conferencias">
+                        <p>Conferencias</p>
+                    </NavLink>
                 </div>
                 <div className="contBtn">
-                    <button className="btn" onClick={changeContact}>Contacto</button>
+                    <NavLink className="btn"  to="/conocenos">
+                        <p>Conocenos</p>
+                    </NavLink>
                 </div>
                 <div className="contBtn l">
                     {
@@ -64,29 +95,7 @@ function NavBar({changeHome, changeContact, changeProductos, changeCherry, chang
             <div className='menuRespons'>
                     <AiFillAppstore className='icon'  onClick={()=> menuRespos()}/>
             </div>
-                {
-                    menu===1?
-                    <div className='btnRespons' onClick={()=> menuRespos()}>
-                                <button className="btn" onClick={changeHome}>Nosotros</button>
-                                <button className="btn" onClick={changeProductos}>Productos</button>
-                                <button className="btn" onClick={changeContact}>Contacto</button>
-                                <button className="btn" onClick={changeFreelancer}>Emprende</button>
-                                <button className="btn" onClick={changeCherry}>Cherry Tech</button>
-                            
-                                {
-                                    userID===undefined?
-                                    <NavLink className="btn" to="/login">
-                                        Iniciar Sesion
-                                    </NavLink>
-                                    :
-                                    <button className="btn" onClick={cerrarSesion}>
-                                        Cerrar Sesion
-                                    </button>
-                                    
-                                }
-                    </div>:
-                    <></>
-                }
+                
         </div>
      );
 }

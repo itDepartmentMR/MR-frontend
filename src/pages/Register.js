@@ -6,7 +6,8 @@ import Cookies from 'universal-cookie';
 import ModalRegister from '../components/ModalRegister';
 
 function Register() {
-    const url = "https://mr-backend-misionriqueza.herokuapp.com/users";
+    const baseURL = process.env.REACT_APP_URIB;
+    const url =`${baseURL}/users`;
     const {register, handleSubmit} = useForm();
     const [int, setInt] = useState(0);
     const [modaReg, setModaReg] = useState(false);

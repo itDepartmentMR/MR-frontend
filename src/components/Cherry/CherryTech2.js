@@ -1,8 +1,8 @@
-import { FcAndroidOs, FcMultipleSmartphones, FcServices } from "react-icons/fc";
+import { FcLandscape, FcServices } from "react-icons/fc";
 import imgR from '../../img/Jhan Aguirre.png'
 function CherryTech() {
     return ( 
-        <section id="afterParty">
+        <section id="afterParty2">
             <div className='contHeaderImg'>
                 <div className='contBodyImg'>
                     <div className='contCardImg' id='top'>
@@ -15,8 +15,7 @@ function CherryTech() {
                 <div className='contFooter'>
                     
                     <button className='btn'>
-                        Descargar
-                        <FcAndroidOs className="icon"/>
+                        Ir
                     </button>
                     <div className='contIcons'>
                          
@@ -26,14 +25,14 @@ function CherryTech() {
             <div className='contBody'>
                 <div className='contCard'>
                     <div className='contCardImg'>
-                        <FcMultipleSmartphones className="icon"/>
+                        <FcLandscape className="icon"/>
                     </div>
                     <div className='contCardTitle'>
-                        <b>After Party</b>
+                        <b>Weed Life</b>
                         <p>Nuevo</p>
                     </div>
                     <div className='contCardText'>
-                        <p>Lanzamiento Alfa Abierta Diciembre 15 2022</p>
+                        <p>Lanzamiento Alfa Abierta Enero 30 2023</p>
                     </div>
                 </div>
                 <div className='contCard'>

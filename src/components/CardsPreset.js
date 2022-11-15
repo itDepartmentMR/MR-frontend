@@ -1,12 +1,12 @@
 
 const storeImg = require.context('../img', true);
-function CardPreset({img,type, tittle,rol, fecha, body, perfilImg, footer}) {
+function CardPreset({img,type, tittle,rol, fecha, body, perfilImg, footer, setModalCof}) {
     return ( 
-        <section className="contCardPreste">
+        <section className="contCardPreste" onClick={()=>setModalCof(true)}>
             <div className="contImg">
                 <img src={storeImg(`./${img}.svg`)} alt={img}/>
             </div>
-            <div className="contBody">
+            <div className="contBodydes">
                     <b className={type}>{type}</b>
                     <h4>{tittle}</h4>
                     <p>{body}</p>

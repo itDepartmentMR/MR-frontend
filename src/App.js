@@ -3,7 +3,7 @@ import Home from './components/Home';
 import NavBar from './components/NavBar';
 import React, { useState } from 'react';
 import Contact from './components/Contact';
-import Catalogue from './components/Catalogue';
+import Catalogue from './pages/Catalogue';
 import CherryTech from './components/Cherry/CherryTech';
 import Freelancer from './components/Freelancer';
 import img from './img/whatsapp.svg';

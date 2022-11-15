@@ -9,11 +9,12 @@ import ModalRegister from '../components/ModalRegister';
 
 function Login() {
     const cookies = new Cookies();
+    const baseURL = process.env.REACT_APP_URIB;
     const {register, handleSubmit} = useForm();
     const [modalLogin, setModalLogin] = useState(false);
     const [fails, setFails] = useState(false);
     //let url = 'http://localhost:5000/users';
-    let url = 'https://mr-backend-misionriqueza.herokuapp.com/userLogin';
+    let url =`${baseURL}/userLogin`;
     //let url = 'http://localhost:5000/userLogin';
    
     async function conexionDb(db) {
@@ -26,12 +27,15 @@ function Login() {
         })
             .then((response) => response.json())
             .then((data) => {
-                cookies.set('email', data.email, {path:"/"});
-                cookies.set('id', data._id, {path:"/"})
-                cookies.set('rol', data.rol, {path:"/"})
-                setModalLogin(true)
+                if (data.msg) {
+                    setFails(true)
+                }else{
+                    cookies.set('email', data.user.email, {path:"/"});
+                    cookies.set('id', data.user._id, {path:"/"})
+                    cookies.set('rol', data.user.rol, {path:"/"})
+                    setModalLogin(true)
+                }
             })
-            .catch(setFails(true))
     }
     //authec if get users
     //const userState = useSelector(state => state.user);

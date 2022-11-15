@@ -1,172 +1,149 @@
-.contNews{
+.News{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: auto;
-    .contPanel{
+    .contNews{
         width: 100%;
-        height: 50%;
-        .contImg{
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .contBody{
             width: 100%;
-            height: 100%;
+            height: 80%;
             display: flex;
-            margin-top: 20px;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
-            img{
-                width: 80%;
-                height: 100%;
-                border-radius: 10px;
+            justify-content: space-around;
+            .contGraphD{
+                width: 40%;
+                height: 60%;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: height 0.2s;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                .contBody{
+                    width: 90%;
+                    height: 90%;
+                }
+                &:hover{
+                    height: 63%;
+                }
+            }
+            .contGraphBit{
+                width: 30%;
+                height: 50%;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .contBody{
+                    width: 90%;
+                    height: 90%;
+                }
+                transition: height 0.2s;
+                box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+                &:hover{
+                    height: 53%;
+                }
             }
         }
     }
-    .contBody{
+    .ApiBitcoins{
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        animation: animBitcoin 0.5s ease-in;
-        .contPanelNews{
-            width: 70%;
-            height: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            .contNewsImport{
-                width: 100%;
-                height: 40%;
-                .contCardPreste{
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    .contImg{
-                        width: 35%;
-                        height: 100%;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            border-top-left-radius: 10px;
-                            border-bottom-left-radius: 10px;   
-                        }
-                    }
-                    .contBody{
-                        width: 60%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        border-bottom-right-radius: 10px;
-                        border-top-right-radius: 10px;
-                        text-align: center;
-                        p{
-                            margin: 5px;
-                            font-size: 12px;
-                        }
-                        #fecha{
-                            color: #b1b1b1;
-                        }
-                        background-color: rgba(199, 199, 199, 0.5);
-                    }
-                    
-                }
-            }
-            .contNewsWeek{
-                width: 100%;
-                height: 60%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                .contCardPreste{
-                    width: 20%;
-                    height: 80%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    .contImg{
-                        width: 100%;
-                        height: 60%;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            border-radius: 10px;
-                        }
-                    }
-                    .contBody{
-                        width: 100%;
-                        height: 40%;
-                        font-size: 12px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: flex-start;
-                        text-align: center;
-                        p{
-                            color: #b1b1b1;
-                        }
-                    }
-                }
-            }
-        }
-        .contBitCoin{
-            width: 20%;
-            height: 90%;
-            overflow: auto;
-            
-            .ApiBitcoins{
+        .contTableBit{
+            width: 100%;
+            height: 100%;
+            table{
                 width: 100%;
                 height: 100%;
-                .contTableBit{
+                border-collapse: collapse;
+                thead{
                     width: 100%;
-                    height: 100%;
-                    table{
+                    height: 10%;
+                    background-color: #FFDE02;
+                    tr{
+                        margin: 0px;
+                        th{
+                            font-size: 12px;
+                            height: 40px;
+                        }
+                    }
+                }
+                tbody{
+                    width: 100%;
+                    height: 90%;
+                    tr{
                         width: 100%;
+                        height: 10%;
+                        text-align: center;
+                        #p{
+                            font-size: 12px;
+                            color: rgb(168, 168, 168);
+                        }
+                        img{
+                            width: 40px;
+                            height: 50%;
+                        }
+                        td{
+                            text-align: center;
+                            font-size: 14px;
+
+                        }
+                        #name{
+                            color: #424242;
+                        }
+                        #price{
+                            color: #000000;
+                        }
+                        #true{
+                            color: rgba(0, 128, 0, 0.5);
+                        }
+                        #false{
+                            color: rgba(255, 0, 0, 0.5);
+                        }    
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 600px){
+        
+        .contNews{
+            .contBody{
+                .contGraphD{
+                    width: 90%;
+                    height: 80%;
+                    .contBody{
                         height: 100%;
-                        thead{
-                            width: 100%;
-                            height: 5%;
-                            background-color: #FFDE02;
-                            tr, th{
-                                font-size: 12px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        
+        .ApiBitcoins{
+            .contTableBit{
+                table{
+                    thead{
+
+                        tr{
+                            th{
+                                font-size: 9px;
                             }
                         }
-                        tbody{
-                            width: 100%;
-                            height: 90%;
-                            
-                            
-                            tr{
-                                width: 100%;
-                                height: 10%;
-                                img{
-                                    width: 40px;
-                                    height: 50%;
-                                }
-                                td{
-                                    text-align: center;
-                                    font-size: 14px;
-                                }
-                                #name{
-                                    color: #424242;
-                                }
-                                #price{
-                                    color: #000000;
-                                }
-                                #true{
-                                    color: rgba(0, 128, 0, 0.5);
-                                }
-                                #false{
-                                    color: rgba(255, 0, 0, 0.5);
-                                }    
+                    }
+                    tbody{
+                        tr{
+                            font-size: 5px;
+                            td{
+                                font-size: 8px;
                             }
                         }
                     }
@@ -174,18 +151,7 @@
             }
         }
     }
-}
-.contNews::-webkit-scrollbar {
-    display: none;
-}
-.contBitCoin::-webkit-scrollbar {
-    display: none;
-}
-@keyframes animBitcoin {
-    0%{
-        margin-left: 50px;
-    }
-    100%{
-        margin-left: 0px;
+    &::-webkit-scrollbar {
+        display: none;
     }
 }

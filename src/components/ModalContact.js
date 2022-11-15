@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const PayPalButton = window.paypal.Buttons.driver("react", { React, ReactDOM });
 
-function ModalContact({name, number, closeNumerModal}) {
+function ModalContact({ number, closeNumerModal}) {
     const [price] = useState(number.toString(10));
     console.log(price)
     function createOrder(data, actions){

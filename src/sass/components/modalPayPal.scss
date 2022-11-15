@@ -1,0 +1,43 @@
+.contModalN{
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .contBody{
+        width: 60%;
+        height: 80%;
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .contHead{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60%;
+        }
+        .contBtns{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 10%;
+            button{
+                width: 20%;
+                height: 50%;
+                border-radius: 10px;
+                cursor: pointer;
+                border: none;
+                background-color: rgba(255, 0, 0, 0.5);
+            }
+        }
+    }
+}

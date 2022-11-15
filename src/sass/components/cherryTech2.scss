@@ -1,7 +1,7 @@
-#afterParty{
+#afterParty2{
     width: 100%;
     height: 100%;
-    background-color: #2a2424;
+    background-color: #ffffff;
     overflow: hidden;
     background-image: url(../../img/LogoCherryTech.svg);
     background-size: 20%;
@@ -27,24 +27,24 @@
             align-items: center;
             justify-content: center;
             .contCardImg{
-                width: 40%;
-                height: 80%;
-                
+                width: 60%;
+                height: 40%;
             }
             #down{
                 position: relative;
-                top: 10%;
-                right: 10%;
-                background-image: url('../../img/iPhone\ 14\ -\ HomeAfterParty.png');
-                background-size: 70%;
+                top: 20%;
+                right: 20%;
+                background-image: url('../../img/Actuators.png');
+                background-size: 100%;
                 background-repeat: no-repeat;
                 background-position: 50%;
             }
             #top{
                 position: relative;
                 top: -10%;
-                background-image: url('../../img/iPhoneLoginAfterParty.png');
-                background-size: 70%;
+                right: -10%;
+                background-image: url('../../img/DashBoardweedLife.png');
+                background-size: 100%;
                 background-repeat: no-repeat;
                 background-position: 50%;
             }
@@ -59,7 +59,7 @@
             .btn{
                 width: 22%;
                 height: 50%;
-                background-color: rgb(241, 147, 251);
+                background-color: #04BFAD;
                 border-radius: 5px;
                 border: 1px solid transparent;
                 border: none;
@@ -78,8 +78,17 @@
                     
                     width: 25%;
                     background-color: transparent;
-                    border: 1px solid rgb(241, 147, 251);
+                    border: 1px solid #04BFAD;
                 }
+            }
+            .contIcons{
+                width: 100%;
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                
             }
         }
     }
@@ -98,18 +107,22 @@
             align-items: center;
             justify-content: space-around;
             border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: #04BF9D;
             
-            box-shadow: 1px 1px 10px #fc3855bf;
+            box-shadow: 1px 1px 10px #172026;
             cursor: default;
             transition: all 0.2s;
             &:hover{
-                box-shadow: 0 5px 2px #fc3855bf;
+                box-shadow: 0 5px 2px #172026;
             }
             .contCardImg{
                 width: 100%;
                 height: 40%;
                 .icon{
+                    width: 30%;
+                    height: 80%;
+                }
+                img{
                     width: 30%;
                     height: 100%;
                 }
@@ -129,8 +142,8 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    background-color: rgba(3, 255, 3, 0.524);
-                    border: 1px solid rgb(2, 255, 2);
+                    background-color: #5fcdd9c1;
+                    border: 1px solid #5FCDD9;
                     border-radius: 15px;
                     font-size: 10px;
                 }
@@ -147,14 +160,14 @@
                     height: 80%;
                     border-radius: 50%;
                     cursor: pointer;
-                    border: 1px solid rgb(241, 147, 251);
+                    border: 1px solid #5FCDD9;
                 }
             }
         }
     }
 }
 @media (max-width: 600px) {
-    #afterParty{
+    #afterParty2{
         height: 120%;
         flex-direction: column;
         .contHeaderImg{

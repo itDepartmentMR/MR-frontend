@@ -1,30 +1,15 @@
-import React, { useEffect, useState } from 'react';
+
 import TableBit from './TableBit';
+//importacion de mi custom hocks
+import {useFetch} from "../app/useFetch";
 
 function ApiBitcoins() {
-    const [dataB, setDataB] = useState([]);
-    const [wait, setWait] = useState(false);
-
-    useEffect(() => {
-        const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=35&page=1&sparkline=false";
-        getData()
-        async function getData() {
-            await fetch(url)
-                .then((response) => response.json())
-                .then((data) => {
-                    setDataB(data)
-                    setWait(true)
-                });
-        }
-     
-    }, [])
-    
-        
-        
-    
+    const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=35&page=1&sparkline=false";
+    //obtencion de la data
+    const {data, loading} = useFetch(url);
     return ( 
         <section className="ApiBitcoins">
-            {wait?<TableBit data={dataB}/>:<>Cargando...</>}
+            {loading?<>Cargando...</>:<TableBit data={data}/>}
         </section>
      );
 }

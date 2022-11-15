@@ -1,85 +1,84 @@
 
-.productos{
+.Catalogues{
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    animation: anim ease-in-out 0.2s;
-    .store{
-        width: 98%;
-        height: 100%;
+    height: 100vh;
+    overflow: auto; 
+    background-color: #ebebeb;
+    .contSearch{
+        width: 100%;
+        height: 10%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        .contCatalogo{
-            width: 100%;
-            height: 15%;
+        justify-content: space-around;
+        .search{
+            width: 500px;
+            height: 50%;
+            
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-around;
+            input{
+                text-align: center;
+                border-radius: 15px;
+                width: 100%;
+                height: 100%;
+                border: 1px solid rgb(88, 88, 88);
+            }
+            .icon{
+                position: relative;
+                left: -5%;
+            }
         }
-        .contContents{
-            width: 100%;
+    }
+    .contStore{
+        width: 100%;
+        height: 70%;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        .contFilters{
+            width: 10%;
+            height: 80%;
+            border-radius: 15px;
+        }
+        .contProducts{
+            width: 80%;
             height: 90%;
             display: flex;
-            flex-direction: row;
+            flex-wrap: wrap;
             align-items: center;
-            justify-content: space-evenly;
-            .contServices{
-                width: 35%;
-                height: 100%;
-                overflow: auto;
-                .contBtnCat{
-                    width: 80%;
-                    height: 10%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    img{
-                        width: 15%;
-                        height: 80%;
-                        margin-left: 5px;
-                    }
-                }
-
+            justify-content: space-around;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                display: none;
             }
-            .contServices::-webkit-scrollbar {
-                appearance: none;
+            .iconReload{
+                width: 20%;
+                height: 20%;
+                animation: reload 2s infinite;
             }
-            .contProduct{
-                width: 35%;
-                height: 100%;
-                overflow: auto;
-                .contBtnCat{
-                    width: 80%;
-                    height: 10%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    img{
-                        width: 15%;
-                        height: 80%;
-                        margin-left: 5px;
-                    }
+            @keyframes reload {
+                0%{
+                    transform: rotate(-180deg);
                 }
             }
-            .contProduct::-webkit-scrollbar {
-                appearance: none;
-            }
-        }  
+        }
+    }
+    .contNews{
+        width: 100%;
+        height: 80%;
     }
     .contModal{
-        width: 90%;
-        height: 80%;
-        position: absolute;
+        width: 100%;
+        height: 100%;
+        position: fixed;
         background-color: transparent;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(15px);
+        top: 0%;
         .contBtnHead{
             width: 100%;
             height: 10%;
@@ -110,7 +109,7 @@
             padding-top: 20px;
             
             border-radius: 15px;
-            background-color: #D9D9D9;
+            background-color: #ffdd02d4;
             .contRow{
                 width: 100%;
                 height: 15%;
@@ -147,7 +146,7 @@
                     .iconPerfect{
                         width: 10%;
                         height: 30%;
-                        color: rgba(255,222,0,1);
+                        color: rgb(255, 255, 255);
                     }
                 }
                 .contBtn{
@@ -162,7 +161,7 @@
                         height: 40%;
                         border: 1px solid transparent;
                         border-radius: 10px;
-                        background-color: rgba(255,222,0,1);
+                        background-color: rgb(255, 255, 255);
                         transition: all 0.2s;
                         cursor: pointer;
                         text-align: center;
@@ -173,7 +172,7 @@
                     }
                     button:hover{
                         background-color: transparent;
-                        border: 1px solid rgba(255, 222, 0, 1);
+                        border: 1px solid rgb(36, 36, 36);
                     }
                 }
                 
@@ -204,156 +203,56 @@
             }
         }
     }
-    .contModalN{
-        width: 100%;
-        height: 80%;
-        position: absolute;
-        background-color: transparent;
-        backdrop-filter: blur(15px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .contBody{
-            width: 40%;
-            height: 90%;
-            background-color: aliceblue;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
-            border-radius: 15px;
-            color: rgb(100, 100, 100);
-            text-align: center;
-            border: 1px solid rgba( 255, 222, 0);
-            .contHead{
-                width: 100%;
-                height: 90%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-            .contBtns{
-                width: 100%;
-                height: 10%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-around;
-                .btnCerrar{
-                    margin-bottom: 20px;
-                    width: 20%;
-                    height: 80%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #ba090079;
-                    border-radius: 5px;
-                    text-decoration: none;
-                    border: 1px solid transparent;
-                    transition: all 0.2s;
-                    color: white;
-                    cursor: pointer;
-                }
-                .btnAceptar{
-                    margin-top: 20px;
-                    width: 20%;
-                    height: 10%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: #0070ba;
-                    border: 1px solid transparent;
-                    border-radius: 5px;
-                    text-decoration: none;
-                    transition: all 0.2s;
-                    color: white;
-                    cursor: pointer;
-                }
-            }
-            
-        }
-    }
-    
 }
-@keyframes anim{
-    0%{
-        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    }
-    100%{
-        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-    }
+.Catalogues::-webkit-scrollbar {
+    display: none;
 }
 @media (max-width: 600px) {
-    .productos{
-        .store{
-            .contContents{
-                flex-direction: column;
-                .contServices{
-                    width: 100%;
-                    .contBtnCat{
-                        margin-top: 10px;
-                        width: 100%;
-                        height: 13%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        img{
-                            width: 10%;
-                            height: 100%;
-                            margin-left: 5px;
-                        }
-                    }
-                }
-                .contProduct{
-                    width: 100%;
-                    .contBtnCat{
-                        margin-top: 10px;
-                        width: 100%;
-                        height: 13%;
-                        display: flex;
-                        flex-direction: column-reverse;
-                        align-items: center;
-                        justify-content: center;
-                        img{
-                            width: 10%;
-                            height: 100%;
-                            margin-left: 5px;
-                        }
-                    }
+    .Catalogues{
+        .contSearch{
+            flex-direction: column;
+            .search{
+                width: 80%;
+            }
+            h3{
+                font-size: 12px;
+            }
+        }
+        .contStore{
+            flex-direction: column;
+            .contFilters{
+                height: 20%;
+                width: 90%;
+            }
+            .contProducts{
+                .contStorePro{
+                    background-color: #fff;
+                    margin: 10px;
                 }
             }
         }
         .contModal{
             .form{
-                font-size: 12px;
-                width: 100%;
+                width: 80%;
+                .contRow{
+                    font-size: 12px;
+                    p{
+                        font-size: 12px;
+                    }
+                }
                 .rating{
                     .contBtn{
-                        width: 60%;
-                        font-size: 12px;
                         button{
+                            width: 70%;
                             font-size: 9px;
                         }
                     }
-                }
-                .contOptionsForm{
-                    button{
-                        font-size: 10px;
-                    }
-                    
                 }
             }
         }
         .contModalN{
             .contBody{
-                width: 70%;
-                height: 60%;
+                width: 90%;
             }
         }
     }

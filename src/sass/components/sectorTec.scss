@@ -1,0 +1,91 @@
+.SectorTec{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-image: url('../../img/marvin-meyer-SYTO3xs06fU-unsplash\ \(2\).jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .contHeader{
+        width: 100%;
+        height: 90%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        .contCardSec{
+            width: 50%;
+            height: 40%;
+            border-radius: 15px;
+           
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: 10%;
+            
+            border-right: 1px solid white;
+            h2{
+                color: white;
+            }
+            .contBtns{
+                width: 70%;
+                height: 30%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                .btn{
+                    width: 20%;
+                    height: 90%;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    border: 1px solid transparent;
+                    transition: border 0.2s;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        text-decoration: none;
+                        color: rgb(255, 255, 255);
+                        font-size: 12px;
+                    }
+                    &:hover{
+                        border-bottom: 2px solid #FFDE02;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .SectorTec{
+        
+        background-size: 500%;
+        background-position: 50%;
+        .contHeader{
+            align-items: center;
+            .contCardSec{
+                width: 80%;
+                margin: 0px;
+                h2{
+                    text-align: center;
+                }
+                .contBtns{
+                    .btn{
+                        a{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
