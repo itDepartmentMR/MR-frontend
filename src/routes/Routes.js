@@ -10,6 +10,7 @@ import SectorTec from '../pages/SectorTec';
 import SectorAmb from '../pages/SectorAmb';
 import SectorCom from '../pages/SectorCom';
 import SectoLog from '../pages/SectorLog';
+import ModalContact from '../components/ModalContact';
 
 function Router() {
     return ( 

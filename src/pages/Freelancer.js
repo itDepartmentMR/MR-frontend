@@ -51,7 +51,7 @@ function Freelancer() {
                                 body="Conferencia virtual"
                                 perfilImg="Donald Herrera"
                                 footer="Donald Herrera"
-                                fecha="15/11/2022"
+                                fecha="15/12/2022"
                                 rol="Ingeniero en Seguridad"
                                 setModalCof={setModalCof}
                     />
@@ -61,8 +61,28 @@ function Freelancer() {
                                 body="Conferencia virtual"
                                 perfilImg="Jhan Aguirre"
                                 footer="Jhan Aguirre"
-                                fecha="20/11/2022"
+                                fecha="20/12/2022"
                                 rol="Ingeniero Biomédico"
+                                setModalCof={setModalCof}
+                    />
+                    <CardPreset img="LogoCherryTech"
+                                type="Tecnología"
+                                tittle="Programacion Orientada a Objetos"
+                                body="Curso virtual"
+                                perfilImg="Donald Herrera"
+                                footer="Donald Herrera"
+                                fecha="15/01/2022"
+                                rol="Ingeniero en Seguridad"
+                                setModalCof={setModalCof}
+                    />
+                    <CardPreset img="LogoCherryTech"
+                                type="Tecnología"
+                                tittle="Primeros Pasos en Linux"
+                                body="Curso virtual"
+                                perfilImg="Donald Herrera"
+                                footer="Donald Herrera"
+                                fecha="5/01/2022"
+                                rol="Ingeniero en Seguridad"
                                 setModalCof={setModalCof}
                     />
                 </div>
@@ -74,8 +94,8 @@ function Freelancer() {
                     <b>Enviado Correctamente</b>
                 </div>:<></>}
                 <div className="contBody">
-                    <h2>Trabaja como Freelancer</h2>
-                    <p>Te buscamos vacantes donde puedas fortalecer tus habilidades y ser Autónomo en tus <b>Proyectos</b>.</p>
+                    <h2>Inscribete en Cursos</h2>
+                    <p>Cursos de Introducción en Ciberseguridad, Programación, Java, Linux. Tambien <b>Cursos Virtuales para Niños</b>.</p>
                     <div className="contHelpers">
                         <img src={imgLogo} alt="cherry"/>
                     </div>
@@ -83,7 +103,7 @@ function Freelancer() {
                 {formM?<div className="contForm">
                     
                     <form onSubmit={handleSubmit(conexionDb)}>
-                        <h4>Envianos tus datos y nos pondremos en contacto</h4>
+                        <h4>Envianos tus datos para participar</h4>
                         <label>Nombre Completo:</label>
                         <input type="text" {...register('nameComp',{required:true})}/>
                         
@@ -92,8 +112,8 @@ function Freelancer() {
                         <label>Telefono:</label>
                         <input type="number" id="tele" {...register('telef',{required:true})}/>
                         {fails?<p id="fails">Tiene que ser de 10 Digitos</p>:<></>}
-                        <label>Habilidades:</label>
-                        <select id="tele" {...register('skills',{required:true})}>
+                        
+                        {/*<select id="tele" {...register('skills',{required:true})}>
                             <option value="Programador Frontend">Programador Frontend</option>
                             <option value="Diseñador Grafico">Diseñador Grafico</option>
                             <option value="Diseñador de Interfaces">Diseñador UI/UX</option>
@@ -103,7 +123,7 @@ function Freelancer() {
                             <option value="Desarrollador de Software">Desarrollador de Software</option>
                             <option value="Publicista">Publicista</option>
                             <option value="Comunicador social">Comunicador Social</option>
-                        </select>
+    </select>*/}
                         <button type="submit" id={wait?"loading":"load"}>{wait?"Cargando...":"Enviar"}</button>
                     </form>
                 </div>:<></>}

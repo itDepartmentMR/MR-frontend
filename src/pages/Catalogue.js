@@ -54,7 +54,7 @@ function Catalogue() {
     return ( 
         <section className="Catalogues">
             
-            {modalSetPay?<ModalContact closeNumerModal={closeNumerModal} number={numerCom}/>:<></>}
+            {modalSetPay?<ModalContact closeNumerModal={closeNumerModal} number={numerCom} dataM={select}/>:<></>}
             <NavBar/>
             <PanelStart/>
             <div className="contSearch">

@@ -36,14 +36,14 @@ function News() {
             },
         },
     };
-
+    const precioDolar=dataDolar.slice(9);
     const labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
     const data = {
         labels,
         datasets: [
             {
                 label: 'Dolar',
-                data: dataDolar,
+                data: precioDolar,
                 borderColor: 'rgb(255, 99, 132)',
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
             },
@@ -62,21 +62,16 @@ function News() {
         let mes = fecha.getMonth()
         let año = fecha.getFullYear()
         const fechaActual = `${año}-${mes + 1}-${dia}`;
-        const fechaPasada = `${año}-${mes}-${dia}`;
-
+        const fechaPasada = `${año}-${mes-1}-${dia}`;
 
         trm
-            .between({startAt: fechaPasada, endAt: fechaActual, order: "DESC"})
+            .between({startAt: fechaPasada, endAt: fechaActual})
             .then((data) => {
                 setDataDolar(data.map(Element => Element.valor))
+                
             })
             .catch((error) => console.log(error));
-
-
     }, [])
-
-
-
     return (
         <section className="News">
             <NavBar />
