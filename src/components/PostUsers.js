@@ -2,7 +2,7 @@ function PostUsers() {
    
     return ( 
         <section className="contPostUsers">
-           <div class="fb-comments" data-href="https://www.misionriqueza.com/" data-width="100%" data-numposts="5"></div>
+           <div className="fb-comments" data-href="https://www.misionriqueza.com/" data-width="50%" data-numposts="5"></div>
         </section>
      );
 }
