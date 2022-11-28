@@ -21,7 +21,7 @@ function Freelancer() {
     //let url = `${baseURL}/userEmpre`;
     
     const [emailUser, setEmailUser] = useState(cookies.get('email'));
-    let url = "http://localhost:5000/cursos"
+    let url = `${baseURL}/cursos`
     const {data, loading} = useFetch(url)
     /*
     async function conexionDb(db) {
