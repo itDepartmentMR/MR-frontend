@@ -1,27 +1,31 @@
-
+import { AuthContext } from '../app/AutContext';
+import React, { useContext, useEffect, useState } from 'react';
+import { AiFillPlayCircle } from "react-icons/ai";  
+import { NavLink } from 'react-router-dom';
 const storeImg = require.context('../img', true);
-function CardPreset({img,type, tittle,rol, fecha, body, perfilImg, footer, setModalCof}) {
+//img,type, tittle,rol, fecha, body, perfilImg, footer, setModalCof, hora
+function CardPreset({data, perfilImg, img}) {
+    const {setSelectCurs} = useContext(AuthContext)
+    function goCurs() {
+        setSelectCurs(data)
+    }
     return ( 
-        <section className="contCardPreste" onClick={()=>setModalCof(true)}>
+        <NavLink className="contCardPreste" to="/cursos" onClick={()=> goCurs()}>
             <div className="contImg">
-                <img src={storeImg(`./${img}.svg`)} alt={img}/>
+                <img src={data.urlImg} alt={img}/>
             </div>
             <div className="contBodydes">
-                    <b className={type}>{type}</b>
-                    <h4>{tittle}</h4>
-                    <p>{body}</p>
-                    <p id="fecha">{fecha}</p> 
+                    <h4>{data.name}</h4>
+                    <p>{data.details}</p>
+                    <p id="fecha">{data.dura}</p> 
+                    <b>20.000 COP</b>
+                    <p id="fecha">{data.laguange}</p>
                     <div className="contPerfil">
-                        <img src={storeImg(`./${perfilImg}.png`)} alt={footer}/>
-                        <div className="contP">
-                            <p>{footer}</p>
-                            <p id="fecha">{rol}</p>
-                        </div>
-                       
+                        <img src={storeImg(`./${img}.svg`)} alt={data.name}/>           
                     </div>
                     
             </div>
-        </section>
+        </NavLink>
      );
 }
 
