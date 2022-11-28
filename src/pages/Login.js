@@ -31,6 +31,7 @@ function Login() {
                     setFails(true)
                 }else{
                     cookies.set('email', data.user.email, {path:"/"});
+                    cookies.set('number', data.user.number, {path:"/"});
                     cookies.set('id', data.user._id, {path:"/"})
                     cookies.set('rol', data.user.rol, {path:"/"})
                     setModalLogin(true)

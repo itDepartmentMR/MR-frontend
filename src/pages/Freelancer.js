@@ -1,20 +1,29 @@
 //import ApiBitcoins from "../components/ApiBitcoins";
 import CardPreset from "../components/CardsPreset";
-import imgLogo from "../img/LogoCherryTech.svg";
-import React, { useState } from 'react';
-import {useForm } from'react-hook-form';
+//import imgLogo from "../img/LogoCherryTech.svg";
+import React, { useState, useEffect } from 'react';
+//import {useForm } from'react-hook-form';
 import NavBar from "../components/NavBar";
-import ModalSimple from "../components/ModalSimple";
-function Freelancer() {
-    const baseURL = process.env.REACT_APP_URIB;
-    const {register, handleSubmit} = useForm();
-    const [wait, setWait] = useState(false);
-    const [modal, setModal] = useState(false);
-    const [formM, setFormM] = useState(true);
-    const [fails, setFails] = useState(false);
-    const [modalCof, setModalCof] = useState(false);
-    let url = `${baseURL}/userEmpre`;
 
+import Cookies from 'universal-cookie';
+import ModalSimple from "../components/ModalSimple";
+import { useFetch } from "../app/useFetch";
+function Freelancer() {
+    
+    const cookies = new Cookies();
+    const baseURL = process.env.REACT_APP_URIB;
+    //const {register, handleSubmit} = useForm();
+    //const [wait, setWait] = useState(false);
+    //const [modal, setModal] = useState(false);
+    //const [formM, setFormM] = useState(true);
+    //const [fails, setFails] = useState(false);
+    const [modalCof, setModalCof] = useState(false);
+    //let url = `${baseURL}/userEmpre`;
+    
+    const [emailUser, setEmailUser] = useState(cookies.get('email'));
+    let url = "http://localhost:5000/cursos"
+    const {data, loading} = useFetch(url)
+    /*
     async function conexionDb(db) {
         setWait(true)
         if (db.telef.length===9) {
@@ -33,62 +42,24 @@ function Freelancer() {
             setWait(false)
         }
         
-    }
+    }*/
     return ( 
         <section className="Freelancer">
-            {modalCof?<ModalSimple text="Esta conferencia aún no ha iniciado, sin embargo te invitamos a registrate para recibir las notificaciones de todas nuestras conferencias" setModalCof={setModalCof}/>:<></>}
+            {modalCof?<ModalSimple text="Esta conferencia aún no ha iniciado, sin embargo te invitamos a registrate para recibir las notificaciones de todas nuestras conferencias" setModalCof={setModalCof} emailUser={emailUser}/>:<></>}
             <NavBar/>
             <div className="contWebinnars">
                 <div className="contHeader">
                     <h1>Webbinars</h1>
-                    <p>Conferencias y Cursos virtuales o presenciales por nuestros profesionales</p>
+                    <p>Conferencias y Cursos virtuales o presenciales por Nuestros profesionales</p>
                 </div>
                 <div className="contBody">
-
-                    <CardPreset img="LogoCherryTech"
-                                type="Tecnología"
-                                tittle="Ciber seguridad y protección digital "
-                                body="Conferencia virtual"
-                                perfilImg="Donald Herrera"
-                                footer="Donald Herrera"
-                                fecha="15/12/2022"
-                                rol="Ingeniero en Seguridad"
-                                setModalCof={setModalCof}
-                    />
-                    <CardPreset img="LogoCherryTech"
-                                type="Biotecnología"
-                                tittle="Prótesis de apoyo y mejoramiento motriz"
-                                body="Conferencia virtual"
-                                perfilImg="Jhan Aguirre"
-                                footer="Jhan Aguirre"
-                                fecha="20/12/2022"
-                                rol="Ingeniero Biomédico"
-                                setModalCof={setModalCof}
-                    />
-                    <CardPreset img="LogoCherryTech"
-                                type="Tecnología"
-                                tittle="Programacion Orientada a Objetos"
-                                body="Curso virtual"
-                                perfilImg="Donald Herrera"
-                                footer="Donald Herrera"
-                                fecha="15/01/2022"
-                                rol="Ingeniero en Seguridad"
-                                setModalCof={setModalCof}
-                    />
-                    <CardPreset img="LogoCherryTech"
-                                type="Tecnología"
-                                tittle="Primeros Pasos en Linux"
-                                body="Curso virtual"
-                                perfilImg="Donald Herrera"
-                                footer="Donald Herrera"
-                                fecha="5/01/2022"
-                                rol="Ingeniero en Seguridad"
-                                setModalCof={setModalCof}
-                    />
+                    {data?data.map((data) => (
+                        <CardPreset key={data._id} data={data} perfilImg="Donald Herrera" img="LogoCherryTech"/>
+                    )):<></>}
                 </div>
                 
             </div>
-            <section className="contEmprende" id="emprende">
+            {/*<section className="contEmprende" id="emprende">
                 {modal?<div className="contModal">
                     <div className="contBtn" onClick={()=> setModal(false)}/>
                     <b>Enviado Correctamente</b>
@@ -124,11 +95,11 @@ function Freelancer() {
                             <option value="Publicista">Publicista</option>
                             <option value="Comunicador social">Comunicador Social</option>
     </select>*/}
-                        <button type="submit" id={wait?"loading":"load"}>{wait?"Cargando...":"Enviar"}</button>
+                        {/*<button type="submit" id={wait?"loading":"load"}>{wait?"Cargando...":"Enviar"}</button>}
                     </form>
-                </div>:<></>}
+                </div>:<></>*/}
                 
-            </section>
+            {/*</section>}}
             {/* 
             <div className="contHeader">
                 <h1>Criptomonedas Estado Actual</h1>

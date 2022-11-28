@@ -11,6 +11,7 @@ import SectorAmb from '../pages/SectorAmb';
 import SectorCom from '../pages/SectorCom';
 import SectoLog from '../pages/SectorLog';
 import ModalContact from '../components/ModalContact';
+import Cursos from '../pages/Cursos';
 
 function Router() {
     return ( 
@@ -28,6 +29,7 @@ function Router() {
                     <Route exact path='/conocenos/sectorcomercial' element={<SectorCom/>}/>
                     <Route exact path='/login' element={<Login/>}/>
                     <Route exact path='/register' element={<Register/>}/>
+                    <Route exact path='/cursos' element={<Cursos/>}/>
                 </Routes>
             </BrowserRouter>
         </>
