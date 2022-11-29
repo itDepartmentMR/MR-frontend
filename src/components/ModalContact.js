@@ -73,6 +73,9 @@ function ModalContact({ number, closeNumerModal, dataM}) {
                 </div>
                 <div className="contHead">
                     <h3>Realizar el Pago</h3>
+                    <a href="https://biz.payulatam.com/B0f053f4F963570">
+                        <img src="https://ecommerce.payulatam.com/img-secure-2015/boton_pagar_grande.png" alt="PayU"/>
+                    </a>
                     <PayPalButton
                         createOrder={(data, actions) => createOrder(data, actions)}
                         onApprove={(data, actions) => onApprove(data, actions)}
