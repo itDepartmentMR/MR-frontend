@@ -62,10 +62,11 @@ function Cursos() {
                     <p>Precio</p>
                     <b>50.000 COP</b>
 
-                    <h4>20.000 COP</h4>
+                    <h4>25.000 COP</h4>
                 </div>
                 <div className="contText">
                     <p>Despues de Efectuar la compra obtendras todo el contenido del curso, codigo, herramientas y los videos, para que puedas utilizarlos en el momento que deses</p>
+                    <p>Por cada Curso Vendido Estamos dando Regalos de Navidad A los Niños de Manizales</p>
                     <p>Contactanos si tienes alguna duda o algun reclamo</p>
                     <b>+3244617966</b>
                     <b>Colombia - Manizales</b>

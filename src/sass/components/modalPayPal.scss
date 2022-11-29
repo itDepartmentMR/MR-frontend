@@ -10,7 +10,8 @@
     .contBody{
         width: 60%;
         height: 80%;
-        background-color: antiquewhite;
+        background-color: rgb(198, 198, 198);
+        border-radius: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -20,10 +21,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             height: 60%;
+            h3{
+                margin-bottom: 40px;
+                border-bottom: 1px solid black;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
             .btnBinance{
-                width: 400px;
+                width: 200px;
                 height: 10%;
                 border-radius: 10px;
                 cursor: pointer;
