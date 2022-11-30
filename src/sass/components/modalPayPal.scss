@@ -7,38 +7,48 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .contBody{
-        width: 60%;
-        height: 80%;
-        background-color: rgb(198, 198, 198);
-        border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    h3{
+        margin-bottom: 40px;
+        border-bottom: 1px solid black;
+        width: 100%;
+        height: 10%;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .contBodyPay{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        .contPayPal{
+            width: 30%;
+            height: 80%;
+            overflow: auto;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         .contHead{
-            width: 100%;
+            width: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around;
-            height: 60%;
-            h3{
-                margin-bottom: 40px;
-                border-bottom: 1px solid black;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+            justify-content: flex-start;
+            height: 80%;
+           
             .btnBinance{
-                width: 200px;
-                height: 10%;
-                border-radius: 10px;
+                width: 300px;
+                height: 50px;
+                border-radius: 40px;
+                margin: 10px;
                 cursor: pointer;
                 border: none;
                 text-align: center;
-                box-shadow: 2px 2px 5px black;
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
@@ -48,29 +58,35 @@
                 font-size: 20px;
                 font-family: 'Times New Roman', Times, serif;
                 img{
-                    width: 10%;
+                    width: 13%;
                     height: 80%;
                     margin: 10px;
                     border-radius: 50%;
                 }
-            }
-        }
-        .contBtns{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 10%;
-            .btnCerrar{
-                width: 20%;
-                height: 50%;
-                border-radius: 10px;
-                cursor: pointer;
-                border: none;
-                background-color: rgba(255, 0, 0, 0.5);
+                &:hover{
+                    opacity: 80%;
+                }
             }
             
         }
+        
+    }
+    .contBtns{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        height: 10%;
+        .btnCerrar{
+            width: 20%;
+            height: 50%;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+        
     }
 }

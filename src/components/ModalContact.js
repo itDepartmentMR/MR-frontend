@@ -67,28 +67,28 @@ function ModalContact({ number, closeNumerModal, dataM}) {
     }
     return ( 
         <div className="contModalN">
-            <div className="contBody">
-                <div id="paypal-confirm-container">
-                    
-                </div>
+            <h3>Realizar el Pago</h3>
+            <div className="contBodyPay">
                 <div className="contHead">
-                    <h3>Realizar el Pago</h3>
                     <a href="https://biz.payulatam.com/B0f053f4F963570">
                         <img src="https://ecommerce.payulatam.com/img-secure-2015/boton_pagar_grande.png" alt="PayU"/>
                     </a>
-                    <PayPalButton
-                        createOrder={(data, actions) => createOrder(data, actions)}
-                        onApprove={(data, actions) => onApprove(data, actions)}
-                        onCancel={(data) => onCancel(data)}
-                    />
                     <button onClick={()=> getBinance()} className="btnBinance">Binance
                     <img src="https://play-lh.googleusercontent.com/T1_WHAGs5WZePQejNSqqrxZah4uhBvYr698nTCFhXMjMZo5oSCoko5yW2wtmeO1ClRU" alt="binance"/>
                     </button>
                 </div>
-                <div className="contBtns">
-                    <button onClick={closeNumerModal} className="btnCerrar">Cerrar</button>
+                <div className="contPayPal">
+                        <PayPalButton
+                            createOrder={(data, actions) => createOrder(data, actions)}
+                            onApprove={(data, actions) => onApprove(data, actions)}
+                            onCancel={(data) => onCancel(data)}
+                        />
+                    </div>
+                
+            </div>
+            <div className="contBtns">
+                    <button onClick={closeNumerModal} className="btnCerrar">Volver</button>
                     
-                </div>
             </div>
         </div>
      );
