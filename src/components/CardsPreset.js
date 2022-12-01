@@ -18,7 +18,7 @@ function CardPreset({data, perfilImg, img}) {
                     <h4>{data.name}</h4>
                     <p>{data.details}</p>
                     <p id="fecha">{data.dura}</p> 
-                    <b>20.000 COP</b>
+                    <b>25.000 COP</b>
                     <p id="fecha">{data.laguange}</p>
                     <div className="contPerfil">
                         <img src={storeImg(`./${img}.svg`)} alt={data.name}/>           
