@@ -6,7 +6,6 @@ import { AiFillCloseCircle, AiOutlineSearch } from "react-icons/ai";
 import { AiOutlineArrowRight, AiFillStar, AiOutlineReload } from "react-icons/ai";
 import ModalContact from "../components/ModalContact";
 import PanelStart from "../components/PanelStart";
-import PostUsers from "../components/PostUsers";
 import {useFetch} from "../app/useFetch";
 
 function Catalogue() {
@@ -77,7 +76,6 @@ function Catalogue() {
                         ))}
                 </div>
             </section>
-            <PostUsers/>
             {modal?<div className="contModal">
                 <div className="contBtnHead">
                     <AiFillCloseCircle className="icon" onClick={()=> setModal(false) }/>

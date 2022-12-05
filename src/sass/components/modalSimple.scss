@@ -5,6 +5,7 @@
     background-color: transparent;
     backdrop-filter: blur(15px);
     display: flex;
+    z-index: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -29,6 +30,24 @@
         }
         .btn{
             width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #868686;
+            height: 20%;
+            background-color: #aeec5c;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+            &:hover{
+                background-color: #e7e7e7;
+                border: 1px solid #aeec5c;
+            }
+        }
+        .btnlogin{
+            width: 45%;
             display: flex;
             flex-direction: column;
             align-items: center;

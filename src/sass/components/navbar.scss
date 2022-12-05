@@ -34,13 +34,14 @@
         
     }
     .btns{
-        width: 70%;
+        max-width: 70%;
         height: 100%;
         display: flex;
         margin-right: 20px;
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
+        
         .contBtn{
             width: 20%;
             height: 50%;
@@ -48,10 +49,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin-left: 5px;
             .btn{
-                width: 90%;
+                width: 100%;
                 height: 100%;
-                margin: 0px 20px;
+                margin: 0px 30px;
                 border: 1px solid transparent;
                 transition: all 0.2s;
                 background-color: transparent;
@@ -64,6 +66,10 @@
                 p{
                     font-size: 15px;
                     color: #312E2E;
+                    display: block;
+                    box-sizing: border-box;
+                    margin: 2px;
+                    
                 }
             }
             .btnL{
@@ -122,15 +128,18 @@
         }
     }
 }
-@media (max-width: 800px){
+@media (max-width: 870px){
     .navBar{
         .btn{
             font-size: 9px;
+           
+            
         }
     }
 }
-@media (max-width: 600px){
+@media (max-width: 750px){
     .navBar{
+        
         .btns{
             display: none;
         }
@@ -148,28 +157,44 @@
             }
         }
         .btnRespons{
-            width: 200px;
-            height: 300px;
-            position: fixed;
+            overflow: auto;
+            width: 45%;
+            height: 100%;
+            position:absolute;
             right: 0%;
-            top: 10%;
-            background-color: rgba(255, 222, 0, 0.9);
+            top: 0%;
+            bottom:0%;
+            
+            z-index: 1;
+            background: #FFDE02;
             backdrop-filter: blur(15px);
             border-radius: 5px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-evenly;
+            box-shadow: -19px 22px 101px 34px rgba(0,0,0,0.28);
             .btn{
-                width: 100%;
-                height: 100%;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 30px;
                 border: 1px solid transparent;
                 background-color: transparent;
                 text-align: center;
                 text-decoration: none;
-                color: black;
-
+                color: rgb(0, 0, 0);
+                font-size: 13px;
+                font-weight: 550;
+                
             }
         }
+    }
+}
+@media (max-width:300px) {
+    .title .contTitle{
+        margin-left: 28px;
     }
 }

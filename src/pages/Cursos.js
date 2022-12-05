@@ -1,10 +1,11 @@
 import { AuthContext } from "../app/AutContext";
 import React, { useContext, useLayoutEffect, useState } from 'react';
 import ModalContact from "../components/ModalContact";
-import { AiFillSecurityScan, AiFillAppstore } from "react-icons/ai";
+import { AiFillSecurityScan, AiFillAppstore, AiOutlineArrowLeft } from "react-icons/ai";
 
 import Cookies from 'universal-cookie';
 import ModalSimple from "../components/ModalSimple";
+import { NavLink } from "react-router-dom";
 const storeImg = require.context('../img', true);
 
 
@@ -48,6 +49,15 @@ function Cursos() {
                 <ModalSimple setModalCof={setModalCof}/>:<></>
             }
             <div className="contHeader">
+            <button class="learn-more">
+                
+            </button>
+                <NavLink to="/conferencias" className="learn-more">
+                <span class="circle" aria-hidden="true">
+                    <AiOutlineArrowLeft className="icon arrow"/>
+                </span>
+                <span class="button-text">Volver</span>
+                </NavLink>
                 <h1>{selectCurs.name}</h1>
                 <p>{selectCurs.desc}</p>
                 <b>Duracion del Curso {selectCurs.dura}</b>
@@ -62,7 +72,7 @@ function Cursos() {
                     <p>Precio</p>
                     <b>50.000 COP</b>
 
-                    <h4>25.000 COP</h4>
+                    <h4>33.500 COP</h4>
                 </div>
                 <div className="contText">
                     <p>Despues de Efectuar la compra obtendras todo el contenido del curso, codigo, herramientas y los videos, para que puedas utilizarlos en el momento que deses</p>
