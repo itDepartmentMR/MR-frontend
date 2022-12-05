@@ -41,7 +41,32 @@
             align-items: center;
             justify-content: flex-start;
             height: 80%;
-           
+            .contBtnWompi{
+            overflow: hidden;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            text-decoration: none;
+            justify-content: center;
+             width: 300px;
+             height: 50px;
+             background-color: #ffc439;
+             border-radius: 25px;
+             color: black;
+             
+             font-size: 20px;
+             font-family: 'Times New Roman', Times, serif;
+             img{
+                width: 15%;
+                border-radius: 50%;
+                height: 80%;
+                margin: 10px;
+             }
+             
+             &:hover{
+                opacity: 80%;
+            }
+            }
             .btnBinance{
                 width: 300px;
                 height: 50px;

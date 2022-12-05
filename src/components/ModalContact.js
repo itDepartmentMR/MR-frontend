@@ -70,8 +70,9 @@ function ModalContact({ number, closeNumerModal, dataM}) {
             <h3>Realizar el Pago</h3>
             <div className="contBodyPay">
                 <div className="contHead">
-                    <a href="https://biz.payulatam.com/B0f053f4F963570">
-                        <img src="https://ecommerce.payulatam.com/img-secure-2015/boton_pagar_grande.png" alt="PayU"/>
+                    <a href="https://checkout.wompi.co/l/JCWM8r" target="_black" className="contBtnWompi">
+                        Transferencia
+                        <img src="https://uploads.commoninja.com/searchengine/wordpress/payment-wompi-for-woocommerce.png" alt="Wompi"/>
                     </a>
                     <button onClick={()=> getBinance()} className="btnBinance">Binance
                     <img src="https://play-lh.googleusercontent.com/T1_WHAGs5WZePQejNSqqrxZah4uhBvYr698nTCFhXMjMZo5oSCoko5yW2wtmeO1ClRU" alt="binance"/>
